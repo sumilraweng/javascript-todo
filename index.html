@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/4720d3065c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- we use faker js api so we can give unique id to the each task in the list
+        we are using faker.js in task compnent  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+
+    <!-- main.js is the javascript file from where the intercation is done with html file -->
+    <script src="./src/main.js" type="module" defer></script>
+
+    <!-- Css file is added to html so that we can styling to our todo list -->
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <!-- here we add the form section to get the user task in input section and 
+        use button elemnet which perfom the submit fuctio of the form -->
+    <div class="wrapper">
+      <div class="add-section">
+        <h1>ADD TASK</h1>
+        <div class="input-section">
+          <form action="" name="taskList" id="taskList">
+            <input
+              name="taskInput"
+              id="taskInput"
+              type="text"
+              placeholder="Add task..."
+            />
+            <button id="addButton" type="submit">+</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- In the list section when task is added through form it will show in the
+            list-section which has the ul element and in ul id is given to ascess it in 
+            javascript filr and we added the li component in the ul through javascript 
+            dom manipulation  -->
+      <div class="list-section">
+        <ul id="tasks"></ul>
+      </div>
+    </div>
+  </body>
+</html>
